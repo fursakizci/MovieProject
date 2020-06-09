@@ -1,0 +1,15 @@
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.DataAccess\bin\Debug\netcoreapp3.1\Movie.Entity.dll
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.DataAccess\obj\Debug\netcoreapp3.1\Movie.DataAccess.csprojAssemblyReference.cache
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.DataAccess\obj\Debug\netcoreapp3.1\Movie.DataAccess.AssemblyInfoInputs.cache
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.DataAccess\obj\Debug\netcoreapp3.1\Movie.DataAccess.AssemblyInfo.cs
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.DataAccess\bin\Debug\netcoreapp3.1\Movie.DataAccess.deps.json
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.DataAccess\bin\Debug\netcoreapp3.1\Movie.DataAccess.dll
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.DataAccess\bin\Debug\netcoreapp3.1\Movie.DataAccess.pdb
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.DataAccess\bin\Debug\netcoreapp3.1\Movie.Entity.pdb
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.DataAccess\obj\Debug\netcoreapp3.1\Movie.DataAccess.csproj.CopyComplete
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.DataAccess\obj\Debug\netcoreapp3.1\Movie.DataAccess.dll
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.DataAccess\obj\Debug\netcoreapp3.1\Movie.DataAccess.pdb
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.DataAccess\obj\Debug\netcoreapp3.1\Movie.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.DataAccess\bin\Debug\netcoreapp3.1\Movie.DataAccess.runtimeconfig.json
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.DataAccess\bin\Debug\netcoreapp3.1\Movie.DataAccess.runtimeconfig.dev.json
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.DataAccess\obj\Debug\netcoreapp3.1\Movie.DataAccess.genruntimeconfig.cache

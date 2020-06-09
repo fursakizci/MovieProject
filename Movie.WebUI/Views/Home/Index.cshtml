@@ -1,0 +1,18 @@
+﻿@model Movie.WebUI.Models.MovieListModel
+
+    <div class="row">
+        <div class="col-md-3">
+
+         @await Component.InvokeAsync("CategoryList")
+        </div>
+        <div class="col-md-9">
+           @foreach (var movie in Model.Movies)
+            {
+            <partial name="_movie" for="@movie" />
+            }
+            
+        </div>
+    </div>
+
+
+   

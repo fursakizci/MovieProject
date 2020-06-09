@@ -1,0 +1,48 @@
+﻿@model Movie.WebUI.Models.MovieListModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Admin Movie</h1>
+<hr />
+
+@if(Model.Movies.Count()>0)
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td style="width:30px">Id</td>
+                <td style="width:175px">Image</td>
+                <td>Name</td>
+                <td style="width:150px"></td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model.Movies)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>
+                        <img src="~/img/@item.ImageUrl" width="150"/>
+                    </td>
+                    <td>@item.Name</td>
+                    <td>
+                        <a class="btn btn-primary btn-sm mr-2" href="/admin/movies/@item.Id">Edit</a>
+                        <form asp-controller="Admin" asp-action="DeleteMovie" method="post" style="display:inline">
+                            <input type="hidden" name="movieId" value="@item.Id"/>
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                        
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-warning">
+        <h4>No Movie</h4>
+    </div>
+}
+

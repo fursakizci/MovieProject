@@ -1,0 +1,14 @@
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.Business\bin\Debug\netcoreapp3.1\Movie.Business.deps.json
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.Business\bin\Debug\netcoreapp3.1\Movie.Business.dll
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.Business\bin\Debug\netcoreapp3.1\Movie.Business.pdb
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.Business\obj\Debug\netcoreapp3.1\Movie.Business.csprojAssemblyReference.cache
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.Business\obj\Debug\netcoreapp3.1\Movie.Business.csproj.CoreCompileInputs.cache
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.Business\obj\Debug\netcoreapp3.1\Movie.Business.AssemblyInfoInputs.cache
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.Business\obj\Debug\netcoreapp3.1\Movie.Business.AssemblyInfo.cs
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.Business\obj\Debug\netcoreapp3.1\Movie.Business.dll
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.Business\obj\Debug\netcoreapp3.1\Movie.Business.pdb
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.Business\bin\Debug\netcoreapp3.1\Movie.Entity.dll
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.Business\bin\Debug\netcoreapp3.1\Movie.Entity.pdb
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.Business\obj\Debug\netcoreapp3.1\Movie.Business.csproj.CopyComplete
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.Business\bin\Debug\netcoreapp3.1\Movie.DataAccess.dll
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.Business\bin\Debug\netcoreapp3.1\Movie.DataAccess.pdb

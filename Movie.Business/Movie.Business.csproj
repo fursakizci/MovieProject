@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Movie.DataAccess\Movie.DataAccess.csproj" />
+    <ProjectReference Include="..\Movie.Entity\Movie.Entity.csproj" />
+  </ItemGroup>
+
+</Project>
