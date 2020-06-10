@@ -33,6 +33,11 @@ namespace Movie.DataAccess.Concrete.MemoryMovie
             throw new NotImplementedException();
         }
 
+        public Entity.Movie GetByIdWithCategories(int Id)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(Entity.Movie entity)
         {
             throw new NotImplementedException();

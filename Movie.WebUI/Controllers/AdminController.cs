@@ -50,7 +50,7 @@ namespace Movie.WebUI.Controllers
             {
                 return NotFound();
             }
-            var entity = _movieService.GetById((int)id);
+            var entity = _movieService.GetByIdWithCategories((int)id);
 
             if(entity == null)
             {
@@ -61,9 +61,10 @@ namespace Movie.WebUI.Controllers
                 Id = entity.Id,
                 Name = entity.Name,
                 ImageUrl = entity.ImageUrl,
-                Description = entity.Description
+                Description = entity.Description,
+                SelectedCategory = entity.MovieCategories.Select(i => i.Category).ToList()
             };
-
+            ViewBag.Categories = _categoryService.GetAll();
             return View(model);
         }
         [HttpPost]
@@ -122,18 +123,19 @@ namespace Movie.WebUI.Controllers
         public IActionResult EditCategory(int Id)
         {
            
-            var entity = _categoryService.GetById(Id);
+            var entity = _categoryService.GetByIdWithMovie(Id);
 
             if(entity == null)
             {
                 return NotFound();
             }
 
-            return View(new CategoryModel() 
+            return View(new CategoryModel()
             {
-            Id = entity.Id,
-            Name = entity.Name
-            });
+                Id = entity.Id,
+                Name = entity.Name,
+                Movies = entity.MovieCategories.Select(i => i.Movie).ToList()
+            }) ;
         }
         [HttpPost]
         public IActionResult EditCategory(CategoryModel model)
@@ -158,5 +160,13 @@ namespace Movie.WebUI.Controllers
             }
             return RedirectToAction("CategoryList");
         }
+        public IActionResult DeleteFromCategory(int movieId, int categoryId)
+        {
+            _categoryService.DeleteFromCategory(movieId, categoryId);
+
+            return Redirect("/Admin/EditCategory/"+categoryId);
+        }
+
+       
     }
 }

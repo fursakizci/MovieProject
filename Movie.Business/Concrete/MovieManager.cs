@@ -34,6 +34,11 @@ namespace Movie.Business.Concrete
             return _movieDal.GetById(Id);
         }
 
+        public Entity.Movie GetByIdWithCategories(int Id)
+        {
+            return _movieDal.GetByIdWithCategories(Id);
+        }
+
         public void Update(Entity.Movie entity)
         {
             _movieDal.Update(entity);

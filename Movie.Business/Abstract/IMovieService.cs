@@ -11,6 +11,7 @@ namespace Movie.Business.Abstract
         void Create(Entity.Movie entity);
         void Update(Entity.Movie entity);
         void Delete(Entity.Movie entity);
-      
+        Entity.Movie GetByIdWithCategories(int Id);
+
     }
 }

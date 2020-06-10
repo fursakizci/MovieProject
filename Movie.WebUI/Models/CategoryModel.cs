@@ -9,5 +9,6 @@ namespace Movie.WebUI.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public List<Movie.Entity.Movie> Movies { get; set; }
     }
 }

@@ -408,7 +408,6 @@ C:\Users\furkan\Desktop\MovieApp\Movie\Movie.WebUI\bin\Debug\netcoreapp3.1\Micro
 C:\Users\furkan\Desktop\MovieApp\Movie\Movie.WebUI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
 C:\Users\furkan\Desktop\MovieApp\Movie\Movie.WebUI\bin\Debug\netcoreapp3.1\System.Text.Json.dll
 C:\Users\furkan\Desktop\MovieApp\Movie\Movie.WebUI\obj\Debug\netcoreapp3.1\Movie.WebUI.csproj.CoreCompileInputs.cache
-C:\Users\furkan\Desktop\MovieApp\Movie\Movie.WebUI\obj\Debug\netcoreapp3.1\Movie.WebUI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\furkan\Desktop\MovieApp\Movie\Movie.WebUI\obj\Debug\netcoreapp3.1\Movie.WebUI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\furkan\Desktop\MovieApp\Movie\Movie.WebUI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_movie.cshtml.g.cs
 C:\Users\furkan\Desktop\MovieApp\Movie\Movie.WebUI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\CategoryList\Default.cshtml.g.cs

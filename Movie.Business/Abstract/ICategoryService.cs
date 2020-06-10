@@ -8,6 +8,8 @@ namespace Movie.Business.Abstract
     public interface ICategoryService
     {
         Category GetById(int Id);
+        Category GetByIdWithMovie(int Id);
+        void DeleteFromCategory(int movieId, int categoryId);
         List<Category> GetAll();
         void Create(Category entity);
         void Update(Category entity);

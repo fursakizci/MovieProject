@@ -37,15 +37,16 @@ namespace Movie.DataAccess.Concrete.EfCore
             new Entity.Movie(){Name="deneme1",Description="aciklama1",ImageUrl="1.jpg"},
             new Entity.Movie(){Name="deneme2",Description="aciklama2",ImageUrl="2.jpg"},
             new Entity.Movie(){Name="deneme3",Description="aciklama3",ImageUrl="3.jpg"},
-            new Entity.Movie(){Name="deneme4",Description="aciklama4",ImageUrl="4.jpg"}
+            new Entity.Movie(){Name="deneme4",Description="aciklama4",ImageUrl="4.jpg"},
+            new Entity.Movie(){Name="SeedDataDeneme",Description="DEnemeSeedData",ImageUrl="11.jpg"}
         };
 
         private static MovieCategory[] MovieCategories =
         {
             new MovieCategory(){Movie = Movies[0],Category = Categories[0]},
             new MovieCategory(){Movie = Movies[1],Category = Categories[1]},
-            new MovieCategory(){Movie = Movies[0],Category = Categories[2]},
-            new MovieCategory(){Movie = Movies[1],Category = Categories[3]},
+            new MovieCategory(){Movie = Movies[0],Category = Categories[0]},
+            new MovieCategory(){Movie = Movies[1],Category = Categories[1]},
         };
 
     }

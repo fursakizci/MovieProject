@@ -26,6 +26,11 @@ namespace Movie.Business.Concrete
             _categoryDal.Delete(entity);
         }
 
+        public void DeleteFromCategory(int movieId, int categoryId)
+        {
+            _categoryDal.DeleteFromCategory(movieId, categoryId);
+        }
+
         public List<Category> GetAll()
         {
             return _categoryDal.GetAll().ToList();
@@ -34,6 +39,10 @@ namespace Movie.Business.Concrete
         public Category GetById(int Id)
         {
             return _categoryDal.GetById(Id);
+        }
+        public Category GetByIdWithMovie(int Id)
+        {
+            return _categoryDal.GetByIdWithMovie(Id);
         }
 
         public void Update(Category entity)
