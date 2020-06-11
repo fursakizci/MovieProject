@@ -3,6 +3,11 @@
     ViewData["Title"] = "CreateMovie";
 }
 
+@section Scripts
+{ 
+    <script src="\modules\jquery-validation\dist\jquery.validate.min.js"></script>
+    <script src="\modules\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js"></script>
+}
 <h1>CreateMovie</h1>
 <hr />
 <div class="row">
@@ -11,19 +16,23 @@
             <div class="form-group row">
                 <label asp-for="Name" class="col-md-2 col-form-label"></label>
                 <div class="col-md-10">
-                    <input asp-for="Name" value="" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                    <input asp-for="Name" value="@Model.Name" class="form-control" />
+
                 </div>
             </div>
             <div class="form-group row">
                 <label asp-for="Description" class="col-md-2 col-form-label"></label>
                 <div class="col-md-10">
-                    <input asp-for="Description" value="" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                    <input asp-for="Description" value="@Model.Description" class="form-control" />
                 </div>
             </div>
             <div class="form-group row">
                 <label asp-for="ImageUrl" class="col-md-2 col-form-label"></label>
                 <div class="col-md-10">
-                    <input asp-for="ImageUrl" value="" class="form-control" />
+                    <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                    <input asp-for="ImageUrl" value="@Model.ImageUrl" class="form-control" />
                 </div>
             </div>
             <div class="form-group row">

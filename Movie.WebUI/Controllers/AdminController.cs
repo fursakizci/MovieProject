@@ -28,21 +28,30 @@ namespace Movie.WebUI.Controllers
         [HttpGet]
         public IActionResult CreateMovie()
         {
-            return View();
+            return View(new MovieModel());
         }
         [HttpPost]
         public IActionResult CreateMovie(Movie.WebUI.Models.MovieModel model)
         {
-            var entity = new Entity.Movie() 
+            if (ModelState.IsValid)
             {
-                Name = model.Name,
-                Description = model.Description,
-                ImageUrl = model.ImageUrl
-            };
+                var entity = new Entity.Movie()
+                {
+                    Name = model.Name,
+                    Description = model.Description,
+                    ImageUrl = model.ImageUrl
+                };
 
-            _movieService.Create(entity);
+                _movieService.Create(entity);
 
-            return RedirectToAction("Index");
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(model);
+            }
+
+            
         }
         public IActionResult EditMovie(int? id)
         {
@@ -68,7 +77,7 @@ namespace Movie.WebUI.Controllers
             return View(model);
         }
         [HttpPost]
-        public IActionResult EditMovie(MovieModel model)
+        public IActionResult EditMovie(MovieModel model, int[] categoryIds)
         {
 
             var entity = _movieService.GetById(model.Id);
@@ -82,7 +91,7 @@ namespace Movie.WebUI.Controllers
             entity.ImageUrl = model.ImageUrl;
             entity.Description = model.Description;
 
-            _movieService.Update(entity);
+            _movieService.Update(entity,categoryIds);
 
             return RedirectToAction("Index");
         }

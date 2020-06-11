@@ -43,5 +43,10 @@ namespace Movie.Business.Concrete
         {
             _movieDal.Update(entity);
         }
+
+        public void Update(Entity.Movie entity, int[] categoryIds)
+        {
+            _movieDal.Update(entity, categoryIds);
+        }
     }
 }

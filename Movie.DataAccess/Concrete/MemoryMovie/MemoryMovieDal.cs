@@ -42,5 +42,10 @@ namespace Movie.DataAccess.Concrete.MemoryMovie
         {
             throw new NotImplementedException();
         }
+
+        public void Update(Entity.Movie entity, int[] categoryIds)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

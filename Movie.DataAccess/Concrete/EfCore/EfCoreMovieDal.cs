@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Movie.DataAccess.Abstract;
+using Movie.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,30 @@ namespace Movie.DataAccess.Concrete.EfCore
                     .Include(i => i.MovieCategories).
                     ThenInclude(i => i.Category)
                     .FirstOrDefault();
+            }
+        }
+
+        public void Update(Entity.Movie entity, int[] categoryIds)
+        {
+            using (var context = new MovieContext())
+            {
+                var product= context.Movies
+                    .Include(i => i.MovieCategories)
+                    .FirstOrDefault(i => i.Id == entity.Id);
+
+                if(product != null)
+                {
+                    product.Name = entity.Name;
+                    product.ImageUrl = entity.ImageUrl;
+                    product.Description = entity.Description;
+
+                    product.MovieCategories = categoryIds.Select(i => new MovieCategory()
+                    {
+                        CategoryId = i,
+                        MovieId = entity.Id
+                    }).ToList();
+                    context.SaveChanges();
+                }
             }
         }
     }

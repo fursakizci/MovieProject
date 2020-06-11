@@ -12,6 +12,7 @@ namespace Movie.Business.Abstract
         void Update(Entity.Movie entity);
         void Delete(Entity.Movie entity);
         Entity.Movie GetByIdWithCategories(int Id);
+        void Update(Entity.Movie entity, int[] categoryIds);
 
     }
 }

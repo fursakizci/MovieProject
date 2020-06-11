@@ -14,10 +14,12 @@
 </head>
 <body>
     <partial name="_navbar" />
-    
+
     <div class="container pt-100 mb-5">
-    @RenderBody()
+        @RenderBody()
     </div>
-    
+
+    <script src="\modules\jquery\dist\jquery.min.js"></script>
+    @RenderSection("Scripts", false)
 </body>
 </html>
