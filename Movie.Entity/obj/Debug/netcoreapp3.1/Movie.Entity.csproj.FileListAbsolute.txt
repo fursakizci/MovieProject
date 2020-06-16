@@ -6,3 +6,4 @@ C:\Users\furkan\Desktop\MovieApp\Movie\Movie.Entity\obj\Debug\netcoreapp3.1\Movi
 C:\Users\furkan\Desktop\MovieApp\Movie\Movie.Entity\obj\Debug\netcoreapp3.1\Movie.Entity.AssemblyInfo.cs
 C:\Users\furkan\Desktop\MovieApp\Movie\Movie.Entity\obj\Debug\netcoreapp3.1\Movie.Entity.dll
 C:\Users\furkan\Desktop\MovieApp\Movie\Movie.Entity\obj\Debug\netcoreapp3.1\Movie.Entity.pdb
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.Entity\obj\Debug\netcoreapp3.1\Movie.Entity.csprojAssemblyReference.cache

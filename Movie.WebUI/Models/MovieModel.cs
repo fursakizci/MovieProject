@@ -16,7 +16,6 @@ namespace Movie.WebUI.Models
         [Required]
         [StringLength(500,ErrorMessage ="You can enter a maximum of 500 caharacters.")]
         public string Description { get; set; }
-        [Required]
         public string ImageUrl { get; set; }
         public List<Category> SelectedCategory { get; set; }
     }

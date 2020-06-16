@@ -417,3 +417,4 @@ C:\Users\furkan\Desktop\MovieApp\Movie\Movie.WebUI\obj\Debug\netcoreapp3.1\Razor
 C:\Users\furkan\Desktop\MovieApp\Movie\Movie.WebUI\obj\Debug\netcoreapp3.1\Razor\Views\Admin\CategoryList.cshtml.g.cs
 C:\Users\furkan\Desktop\MovieApp\Movie\Movie.WebUI\obj\Debug\netcoreapp3.1\Razor\Views\Admin\CreateCategory.cshtml.g.cs
 C:\Users\furkan\Desktop\MovieApp\Movie\Movie.WebUI\obj\Debug\netcoreapp3.1\Razor\Views\Admin\EditCategory.cshtml.g.cs
+C:\Users\furkan\Desktop\MovieApp\Movie\Movie.WebUI\obj\Debug\netcoreapp3.1\Movie.WebUI.MvcApplicationPartsAssemblyInfo.cs

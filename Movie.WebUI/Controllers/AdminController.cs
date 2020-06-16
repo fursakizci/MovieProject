@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Movie.Business.Abstract;
 using Movie.Entity;
@@ -31,7 +33,7 @@ namespace Movie.WebUI.Controllers
             return View(new MovieModel());
         }
         [HttpPost]
-        public IActionResult CreateMovie(Movie.WebUI.Models.MovieModel model)
+        public IActionResult CreateMovie(Movie.WebUI.Models.MovieModel model, IFormFile file)
         {
             if (ModelState.IsValid)
             {
@@ -39,8 +41,20 @@ namespace Movie.WebUI.Controllers
                 {
                     Name = model.Name,
                     Description = model.Description,
-                    ImageUrl = model.ImageUrl
+                    
                 };
+
+                if(file != null)
+                {
+                    entity.ImageUrl = file.FileName;
+
+                    var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\img", file.FileName);
+                    using (var stream = new FileStream(path, FileMode.Create))
+                    {
+                        file.CopyTo(stream);
+                    }
+
+                }
 
                 _movieService.Create(entity);
 
@@ -51,7 +65,7 @@ namespace Movie.WebUI.Controllers
                 return View(model);
             }
 
-            
+
         }
         public IActionResult EditMovie(int? id)
         {
@@ -77,23 +91,38 @@ namespace Movie.WebUI.Controllers
             return View(model);
         }
         [HttpPost]
-        public IActionResult EditMovie(MovieModel model, int[] categoryIds)
+        public IActionResult EditMovie(MovieModel model, int[] categoryIds,IFormFile file)
         {
 
-            var entity = _movieService.GetById(model.Id);
-
-            if(entity == null)
+            if (ModelState.IsValid)
             {
-                return NotFound();
+                var entity = _movieService.GetById(model.Id);
+
+                if (entity == null)
+                {
+                    return NotFound();
+                }
+
+                entity.Name = model.Name;
+                entity.Description = model.Description;
+
+                if(file != null)
+                {
+                    entity.ImageUrl = file.FileName;
+
+                    var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\img", file.FileName);
+                    using (var stream = new FileStream(path, FileMode.Create))
+                    {
+                        file.CopyTo(stream);
+                    }
+                }
+
+                _movieService.Update(entity, categoryIds);
+
+                return RedirectToAction("Index");
             }
-
-            entity.Name = model.Name;
-            entity.ImageUrl = model.ImageUrl;
-            entity.Description = model.Description;
-
-            _movieService.Update(entity,categoryIds);
-
-            return RedirectToAction("Index");
+            ViewBag.Categories = _categoryService.GetAll();
+            return View(model);
         }
 
         public IActionResult DeleteMovie(int movieId)
